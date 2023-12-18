@@ -1,0 +1,3 @@
+import hetedik
+
+hetedik.hetes()
