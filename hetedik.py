@@ -83,7 +83,20 @@ def leghosszabbLeiras(lista: list):
             maxErtek = len(lista[index].leiras)
             maxIndex = index
         index += 1
-    print(f"A leghosszabb leírás: {lista[maxIndex].nev}, (hossza: {maxErtek} karakter")
+    print(f"A leghosszabb leírás: {lista[maxIndex].nev}, (hossza: {maxErtek} karakter)")
+
+
+def legkisebbSorszam(lista: list):
+    minSzam = lista[0].hely
+    minIndex = 0
+    index = 0
+    while index < len(lista):
+        if lista[index].hely < minSzam:
+            minSzam = lista[index].hely
+            minIndex = index
+        index += 1
+    print(f"A legkisebb sorszámú helyen levő szarvas neve: {lista[minIndex].nevMagyar}")
+
 
 
 def hetes():
@@ -99,3 +112,4 @@ def hetes():
     atlagMagassag(szarvasokListaja)
     parosMagyar(szarvasokListaja)
     leghosszabbLeiras(szarvasokListaja)
+    legkisebbSorszam(szarvasokListaja)
